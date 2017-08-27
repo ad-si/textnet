@@ -45,7 +45,7 @@ For example:
 - <https://surge.sh/#html>
 - <https://netlify.com/#html>
 - <https://neocities.org/#html>
-- <https://aws.amazon.com/s3/#html>
+- <https://aws.amazon.com/s3/#html> - That's where textnet.io is hosted.
 
 Or get your own (virtual) server on e.g.
 
