@@ -1,7 +1,7 @@
 # Textnet - The Internet of Text
 
 Textnet is a subnet of the internet
-consisting only of human-readable plain text files.
+consisting only of human-readable plain text content.
 
 
 ## FAQ
@@ -30,7 +30,10 @@ Check out the full list at the "Index" section down below.
 - As plain text with any browser
 - As plain text on your command line: `curl -L http://textnet.io`
 - With a browser extension which can render markdown
-  (e.g. <https://chrome.google.com/webstore/detail/markdown-preview/#html>)
+  (e.g. <https://github.com/simov/markdown-viewer>,
+  or <https://goo.gl/unXkFA> which can even render LaTeX math equations)
+  For extensions which only trigger on `.md` URLs you can open the original
+  file for this page at <http://textnet.io/readme.md>.
 - As a PDF by converting it with pandoc:
   `pandoc http://textnet.io --output textnet.pdf`
 - As a EPUB by converting it with pandoc:
@@ -102,6 +105,11 @@ If your text contains links which link to HTML (normal) websites
 please make sure that the URL indicates this, either by linking
 directly to a HTML file (e.g. <http://example.com/index.html>) or
 adding a HTML hash (e.g. <http://example.com/#html>)
+
+Math should be written in LaTeX and to enable rendering for markdown viewers
+enclose them in `$` delimiters. For example:
+
+$E = \frac{mc^2}{\sqrt{1 - \frac{v^2}{c^2}}}$
 
 And by the way: It can also include emojis 😁🎉!
 
