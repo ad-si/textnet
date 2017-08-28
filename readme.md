@@ -34,10 +34,10 @@ Check out the full list at the "Index" section down below.
   or <https://goo.gl/unXkFA> which can even render LaTeX math equations)
   For extensions which only trigger on `.md` URLs you can open the original
   file for this page at <http://textnet.io/readme.md>.
-- As a PDF by converting it with pandoc:
-  `pandoc http://textnet.io --output textnet.pdf`
 - As a EPUB by converting it with pandoc:
-  `pandoc http://textnet.io --output textnet.pdf`
+  `pandoc --from markdown --output textnet.epub http://textnet.io`
+- As a PDF by converting it with pandoc:
+  `pandoc -f markdown -o textnet.pdf --latex-engine=xelatex http://textnet.io`
 
 
 ### How can I publish something?
