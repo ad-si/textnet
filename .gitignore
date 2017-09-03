@@ -2,3 +2,4 @@
 /jspm_packages
 /.serverless
 /.webpack
+/env.json

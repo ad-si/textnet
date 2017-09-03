@@ -1,38 +1,33 @@
 const assert = require('assert')
 
-const index = require('../index.js')
+const index = require('../source/index.js')
 
-index.main(
-  {headers: {}},
-  null,
-  (error, response) => {
-    assert.equal(error, null, error)
-    assert.equal(typeof response.body, 'string', response.body)
-    console.info(response.body.charCodeAt(0))
-    console.info('Correctly serve text/plain ✔︎')
-  }
-)
+{
+  const body = index().body
+  assert.equal(typeof body, 'string')
 
-index.main(
-  {headers: {Accept: 'text/ansi'}},
-  null,
-  (error, response) => {
-    assert.equal(error, null)
-    assert.equal(typeof response.body, 'string')
-    assert.equal(response.body.charCodeAt(0), 27) // Escape sequence
+  console.info('Serve text/plain per default ✔︎')
+}
 
-    console.info('Correctly serve text/ansi ✔︎')
-  }
-)
+{
+  const body = index('text/plain').body
+  assert.equal(typeof body, 'string')
 
-index.main(
-  {headers: {Accept: 'text/html'}},
-  null,
-  (error, response) => {
-    assert.equal(error, null)
-    assert.equal(typeof response.body, 'string')
-    assert(response.body.includes('</h1>'))
+  console.info('Serve text/plain on request ✔︎')
+}
 
-    console.info('Correctly serve text/html ✔︎')
-  }
-)
+{
+  const body = index('text/ansi').body
+  assert.equal(typeof body, 'string')
+  assert.equal(body.charCodeAt(0), 27) // Escape sequence
+
+  console.info('Serve text/ansi on request ✔︎')
+}
+
+{
+  const body = index('text/html').body
+  assert.equal(typeof body, 'string')
+  assert(body.includes('</h1>'))
+
+  console.info('Serve text/html on request ✔︎')
+}

@@ -1,8 +1,8 @@
 {
   "name": "textnet",
   "description": "The Internet of Text",
-  "version": "0.0.0",
-  "main": "index.js",
+  "version": "0.1.0",
+  "main": "functions/__main__.js",
   "scripts": {
     "test": "node tests/main.js"
   },
@@ -24,5 +24,16 @@
     "serverless": "^1.21.0",
     "serverless-webpack": "^2.2.2",
     "webpack": "^3.5.5"
+  },
+  "private": true,
+  "stdlib": {
+    "build": "faaslang",
+    "name": "adius/textnet",
+    "timeout": 5000,
+    "publish": true,
+    "personalize": {
+      "keys": [],
+      "user": []
+    }
   }
 }
