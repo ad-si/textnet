@@ -1,0 +1,33 @@
+service: textnet
+
+# AWS: TODO reenable when texnet.io certificate can be created
+provider:
+  name: aws
+  runtime: nodejs6.10
+  memorySize: 128
+  stage: production
+
+plugins:
+  - serverless-webpack
+
+# FIXME: Does not seem to work
+# GCloud
+# provider:
+#   name: google
+#   runtime: nodejs
+#   project: textnet-178805
+#   credentials: ~/.gcloud/keyfile.json
+
+functions:
+  index:
+    handler: index.main
+    events:
+      - http:
+          path: /
+          method: get
+  sun:
+    handler: sun.main
+    events:
+      - http:
+          path: /sun
+          method: get

@@ -116,7 +116,7 @@ And by the way: It can also include emojis 😁🎉!
 
 ### What file extension should be used?
 
-The files (or rather the URLS) should have no extension!
+The files (or rather the URLs) should have no extension!
 If you want to convey the content type
 use the optional http header field "Content-Type" for it.
 
@@ -191,9 +191,9 @@ Custom IP address:
 
 ## About
 
-This website was created by [Adrian Sieber](adriansieber.com#html),
+This website was created by [Adrian Sieber](https://adriansieber.com#html),
 who got fed up by shitty websites which take forever to load and look awful,
 although they contain minimal content (e.g. weather forecast for tomorrow).
 
-This work is also sponsored by <https://feram.io>.
+This work is also sponsored by <https://feram.io#html>.
 A service which automatically finds & fixes bugs in code.

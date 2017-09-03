@@ -1,0 +1,28 @@
+{
+  "name": "textnet",
+  "description": "The Internet of Text",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/main.js"
+  },
+  "dependencies": {
+    "marked": "^0.3.6",
+    "marked-terminal": "^2.0.0",
+    "suncalc": "^1.8.0"
+  },
+  "keywords": [
+    "textnet",
+    "terminal",
+    "cli"
+  ],
+  "author": "Adrian Sieber",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-minify": "^0.2.0",
+    "babel-minify-webpack-plugin": "^0.2.0",
+    "serverless": "^1.21.0",
+    "serverless-webpack": "^2.2.2",
+    "webpack": "^3.5.5"
+  }
+}
